@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+	<!--here we write all UI code -->
+    <aura:attribute name="FirstName" type="string" 
+                    default="John" 
+                    description="This is a field for First name"/>
+     <aura:attribute name="LastName" type="string" 
+                    default="Doe" 
+                    description="This is a field for Last name"/>
+    The name of employee we just stored is = {!v.FirstName} , {!v.LastName}
+</aura:component>

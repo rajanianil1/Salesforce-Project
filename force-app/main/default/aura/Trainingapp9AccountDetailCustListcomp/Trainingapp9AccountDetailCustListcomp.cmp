@@ -1,0 +1,63 @@
+<aura:component controller="AccountDetailCustList"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+        
+    	<!-- Calling doInit method to perform some activty ASA component loads -->
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>     
+    	<!-- Create array type account variable -->
+        <aura:attribute name='accLst' type="Account[]"/> 
+    	
+    	<div class="slds-page-header">
+    		<div class="slds-media__body">
+    			<h1 class="slds-page-header__title slds_truncate slds-align-middle">Welcome To HDFC Insurance</h1>      
+        	</div>
+      	</div>
+		
+    	<article class="slds-card">
+        <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <h2> 
+               <span class="slds-text-heading_small">List of Customers</span>
+            </h2>
+        </header>
+        </div>
+            
+        <!-- This is used to show a table - Topic SLDS -->    
+        <div class="slds-card__body">
+        <table class="slds-table slds-table_bordered slds-no-row-hover slds-table-cell_buffer">
+            <!-- This is used to show table column --> 
+            <thead>
+            	<tr class="slds-text-title_caps">
+                	<th scope="col">
+                    <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                	<th scope="col">
+                    <div class="slds-truncate" title="Type">Type</div>
+                    </th>
+                	<th scope="col">
+                    <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                </tr>
+            </thead>
+            <!-- This is used to show table body -->
+            <tbody>
+            <!-- Iteration Account Record -->
+                <aura:iteration items="{!v.accLst}" var="acc">
+                    <tr class="slds-hint-parent">
+                        <td>
+                           <div class="slds-truncate">
+                               <a href="javascript:void(0);">{!acc.Name}</a></div>
+                        </td>                            
+                        <td>
+                            <div class="slds-truncate">{!acc.Type}</div>
+                        </td> 
+                        <td>
+                            <div class="slds-truncate" title="{!acc.Phone}">{!acc.Phone}</div>
+                        </td> 
+                    </tr>
+                </aura:iteration>    
+            </tbody>
+         </table>
+       </div>    
+    </article>
+ </aura:component>

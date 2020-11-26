@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="whichbuttonpressed_ID" type="string" />
+    <aura:attribute name="whichbuttonpressed_Name" type="string" />
+    
+        <div class="slds-page-header">
+    	<div class="slds-media__body">
+             <h1 class="slds-page-header__title slds-truncate slds-align-middle">Got button source</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    
+    <p>You clicked: {!v.whichbuttonpressed_ID}</p>
+    <br/>
+    <p>You clicked: {!v.whichbuttonpressed_Name}</p>
+    <br/>
+    <lightning:button aura:id="button1" name='Button one' label="please click me" onclick="{c.callJSCode}" />
+    <lightning:button aura:id="button2" name='Button Two' label="Click me too" onclick="{c.callJSCode}" />
+    
+    
+</aura:component>

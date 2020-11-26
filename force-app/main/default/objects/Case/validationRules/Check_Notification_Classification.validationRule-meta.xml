@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Notification_Classification</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT( ISNEW() ) 
+,
+    ISCHANGED(Notification_Classification__c ) 
+,
+    ISPICKVAL(Notification_Classification__c, &apos;&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Notification_Classification__c</errorDisplayField>
+    <errorMessage>We can not remove the value of this field</errorMessage>
+</ValidationRule>

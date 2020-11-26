@@ -1,0 +1,45 @@
+<aura:component controller="HDFCCreateDML"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+	<!-- Define Attribute -->
+        <aura:attribute name='Attrclient' type="New_HDFC_Customer_Detail__c"
+                    default="{'sObjectType': 'New_HDFC_Customer_Detail__c',
+                            'First_Name__c': '',
+                            'Last_Name__c': '',
+                            'E_mail__c': '',
+                            'Monthly_Salary__c': ''}"/>
+    
+    <div class="slds-page-header">
+       <div class="slds-media__body">
+        <h1 class="slds-page-header__title slds-truncate slds-align-middle" > Welcome To HDFC Insurance</h1>
+        <p class="slds-text-body__small slds-line-height__reset">Please Enter Client Details</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="form-group">
+        <label> First Name: </label>
+        <ui:inputText class="form-control" value="{!v.Attrclient.First_Name__c}"/>
+        </div>
+        <div class="form-group">
+        <label> Last Name: </label>
+        <ui:inputText class="form-control" value="{!v.Attrclient.Last_Name__c}"/>
+        </div>
+        <div class="form-group">
+        <label> Email Address: </label>
+        <ui:inputText class="form-control" value="{!v.Attrclient.E_mail__c}"/>
+        </div>
+        <div class="form-group">
+        <label> Monthly Salary: </label>
+        <ui:inputText class="form-control" value="{!v.Attrclient.Monthly_Salary__c}"/>
+        </div>
+         <div class="col-md-5 text-center">
+        <ui:button class="btn btn-default" press="{!c.CreateClient}"> Create </ui:button>
+        </div>
+        <div class="col-md-4 text-center">
+        <ui:button class="btn btn-default" press="{!c.DeleteClient}"> Delete </ui:button>
+        </div>
+        <div class="col-md-4 text-center">
+         <ui:button class="btn btn-default" press="{!c.UpdateClient}"> Update </ui:button>
+        </div>
+    </div>
+ </aura:component>

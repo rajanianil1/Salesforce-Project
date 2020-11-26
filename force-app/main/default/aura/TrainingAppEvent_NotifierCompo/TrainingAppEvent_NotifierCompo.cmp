@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:registerEvent name="appEvent" type="c:MyApplicationEvent"/>
+    <div class="slds-page-header">
+    	<div class="slds-media__body">
+             <h1 class="slds-page-header__title slds-truncate slds-align-middle">Case Study Of Application Event</h1>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <lightning:button label="Click here to fire an application event"
+                      onclick="{!c.fireApplicationEvent}"/>
+    <br/>
+    <br/>
+</aura:component>

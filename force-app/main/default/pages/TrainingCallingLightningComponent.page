@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:includeLightning />
+    <Script>
+    	$Lightning.use("c:TrainingDisplayCustomerListapp",function(){
+        $Lightning.createComponent(
+        "c.ComponentName",
+        {},
+ 		'lightning',
+        function(cmp){
+        //do some stuff
+        });
+        });   
+    
+    </Script>
+</apex:page>

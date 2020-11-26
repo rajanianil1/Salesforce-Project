@@ -1,0 +1,13 @@
+<aura:component >
+	<lightning:accordion activeSectionName="A">
+    	<lightning:accordionSection name="A"
+                                    label="Customer Personal Details">AAAAAAAA
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B"
+                                    label="Customer Personal Details">BBBBBBBB
+        </lightning:accordionSection>
+    	  <lightning:accordionSection name="C"
+                                    label="Customer Personal Details">CCCCCCCC
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

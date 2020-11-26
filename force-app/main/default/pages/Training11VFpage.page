@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id='lightning' />
+    <Script>
+    	$Lightning.use("c:Trainingapp8ServerInsert",function(){
+        $Lightning.createComponent(
+        "c:Trainingapp8ServerInsertcomp",
+        {},
+ 		'lightning',
+        function(cmp){
+        //do some stuff
+        });//Create component closed
+        });   //lightning use closed
+    
+    </Script>
+</apex:page>
